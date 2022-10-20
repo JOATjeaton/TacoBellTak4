@@ -15,6 +15,8 @@ import { RewardsLayoutComponent } from './rewards-layout/rewards-layout.componen
 import { NutritionLayoutComponent } from './nutrition-layout/nutrition-layout.component';
 import { GiftCardLayoutComponent } from './gift-card-layout/gift-card-layout.component';
 import { DeliveryLayoutComponent } from './delivery-layout/delivery-layout.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { DeliveryLayoutComponent } from './delivery-layout/delivery-layout.compo
     NutritionLayoutComponent,
     GiftCardLayoutComponent,
     DeliveryLayoutComponent,
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

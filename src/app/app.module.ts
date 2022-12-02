@@ -17,6 +17,13 @@ import { GiftCardLayoutComponent } from './gift-card-layout/gift-card-layout.com
 import { DeliveryLayoutComponent } from './delivery-layout/delivery-layout.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { AddProductComponent } from './card/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +41,19 @@ import { HttpClientModule } from '@angular/common/http';
     GiftCardLayoutComponent,
     DeliveryLayoutComponent,
     UserInfoComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

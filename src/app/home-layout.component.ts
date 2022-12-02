@@ -20,14 +20,14 @@ export class HomeMenu implements OnInit{
       }
     }
   ngOnInit(): void {
-    this.cardService.getProducts().subscribe((data:cardmodel []) =>{
+    /*this.cardService.getProducts().subscribe((data:cardmodel []) =>{
       console.log("fetching products");
       for (var card of data) {
         console.log(card);
         this.cards.push(card);
       }
     }
-    );
+    );*/
     
   }
 }
